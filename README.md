@@ -12,13 +12,16 @@
 
 ## 다음은 마이닝용 사용자를 만들어주세요.
 
-- CREATE USER dmuser IDENTIFIED BY WelCome1234#_
--       DEFAULT TABLESPACE USERS
--       TEMPORARY TABLESPACE TEMP
--       QUOTA UNLIMITED ON USERS;
--Commit;
+<pre><code> 
+CREATE USER dmuser IDENTIFIED BY WelCome1234#_
+       DEFAULT TABLESPACE USERS
+       TEMPORARY TABLESPACE TEMP
+       QUOTA UNLIMITED ON USERS;
+Commit;
+</code></pre>
 
 ## 마이닝을 위한 권한을 부여합니다.
+<pre><code>
 GRANT CREATE MINING MODEL TO dmuser;
 GRANT CREATE SEQUENCE TO dmuser;
 GRANT CREATE TABLE TO dmuser;
@@ -34,6 +37,7 @@ GRANT SELECT ANY MINING MODEL TO dmuser;
 
 GRANT EXECUTE ON CTXSYS.CTX_DDL TO dmuser;
 REVOKE SELECT ANY MINING MODEL FROM dmuser;
+</code></pre>
 
 ## SQLDeveloper에서 Data Miner를 활용하실 경우, Data Miner Repository를 설치해 주십시오.
 https://www.oracle.com/webfolder/technetwork/tutorials/obe/db/12c/r1/dm/dm_41/ODM12c-41_SetUp.html
