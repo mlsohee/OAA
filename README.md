@@ -5,15 +5,14 @@
 
 ## DB서버에 접속하여 다음과 같이 AA 옵션을 활성화하십시오.
 
-- cd $ORACLE_HOME/bin
-- > srvctl stop database -d Sales(DB고유이름)
-- > chopt enable oaa
-- > srvctl start database -d Sales
+<pre><code>cd $ORACLE_HOME/bin
+ > srvctl stop database -d Sales(DB고유이름)
+ > chopt enable oaa
+ > srvctl start database -d Sales
+</code></pre>
 
 ## 다음은 마이닝용 사용자를 만들어주세요.
-
-<pre><code> 
-CREATE USER dmuser IDENTIFIED BY WelCome1234#_
+<pre><code>CREATE USER dmuser IDENTIFIED BY WelCome1234#_
        DEFAULT TABLESPACE USERS
        TEMPORARY TABLESPACE TEMP
        QUOTA UNLIMITED ON USERS;
@@ -21,8 +20,7 @@ Commit;
 </code></pre>
 
 ## 마이닝을 위한 권한을 부여합니다.
-<pre><code>
-GRANT CREATE MINING MODEL TO dmuser;
+<pre><code>GRANT CREATE MINING MODEL TO dmuser;
 GRANT CREATE SEQUENCE TO dmuser;
 GRANT CREATE TABLE TO dmuser;
 GRANT CREATE PROCEDURE TO dmuser;
