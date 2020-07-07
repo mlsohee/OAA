@@ -5,7 +5,7 @@
 
 DB서버에 접속하여 다음과 같이 AA 옵션을 활성화하십시오.
 
-cd $ORACLE_HOME/bin
-srvctl stop database -d Sales(DB고유이름)
-chopt enable oaa
-srvctl start database -d Sales
+- cd $ORACLE_HOME/bin
+> srvctl stop database -d Sales(DB고유이름)
+> chopt enable oaa
+> srvctl start database -d Sales
